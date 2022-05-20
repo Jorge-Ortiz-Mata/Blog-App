@@ -15,7 +15,6 @@ class ProfilesTest < ApplicationSystemTestCase
     click_on "New Profile"
 
     fill_in "Age", with: @profile.age
-    fill_in "Location", with: @profile.location
     fill_in "User", with: @profile.user_id
     fill_in "Username", with: @profile.username
     click_on "Create Profile"
@@ -29,7 +28,6 @@ class ProfilesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Age", with: @profile.age
-    fill_in "Location", with: @profile.location
     fill_in "User", with: @profile.user_id
     fill_in "Username", with: @profile.username
     click_on "Update Profile"

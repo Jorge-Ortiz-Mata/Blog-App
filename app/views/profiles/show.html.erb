@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>User:</strong>
+  <%= @profile.user_id %>
+</p>
+
+<p>
   <strong>Username:</strong>
   <%= @profile.username %>
 </p>
@@ -10,15 +15,5 @@
   <%= @profile.age %>
 </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @profile.location %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @profile.user_id %>
-</p>
-
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Back', root_path %>

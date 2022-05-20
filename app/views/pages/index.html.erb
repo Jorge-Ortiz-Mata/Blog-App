@@ -1,16 +1,22 @@
 <h1>Blog App</h1>
+
+<hr>
+
+<h3>
+    Create Post: <%= link_to "New post", new_post_path %> <br>
+    Create Profile: <%= link_to "Create profile", new_profile_path if !current_user.profile %>
+</h3>
+
+<hr>
+
 <p>
     These are all the posts from the users.
 </p>
 
-<h3>
-    Create a new Post: <%= link_to "New post", new_post_path %>
-</h3>
-
 <% @posts.each do |post| %>
-    <h2>
+    <h3>
         <%= post.title %> 
-    </h2>
+    </h3>
     <p>
         <%= post.description %>
     </p>

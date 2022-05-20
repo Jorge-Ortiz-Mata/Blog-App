@@ -1,11 +1,16 @@
 <h1>Blog App</h1>
 
+<% if current_user %>
 <hr>
-
-<h3>
-    Create Post: <%= link_to "New post", new_post_path %> <br>
-    Create Profile: <%= link_to "Create profile", new_profile_path if !current_user.profile %>
-</h3>
+    <h3>
+        Create Post: <%= link_to "New post", new_post_path %> <br>
+        <% if !current_user.profile %>
+            Create Profile: <%= link_to "Create profile", new_profile_path %>
+        <% else %>
+            Profile: <%= link_to "#{current_user.profile.username}", profile_path(current_user.profile) %>
+        <% end %>
+    </h3>
+<% end %>
 
 <hr>
 

@@ -12,9 +12,12 @@
         <%= post.title %> 
     </h2>
     <p>
-        <%= post.string %>
+        <%= post.description %>
     </p>
     <strong>
         <%= post.user.email %>
     </strong>
+    <p>
+        <%= link_to 'Edit', edit_post_path(post) %>
+    </p>
 <% end %> 
